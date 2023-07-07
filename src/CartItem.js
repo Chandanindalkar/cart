@@ -16,6 +16,9 @@ class CartItem extends React.Component{
                     <div>Qty: 1</div>
                     <div className="cart-item-actions">
                         {/*Buttons Here*/}
+                        <img alt="increase" className="action-icons" src="https://www.svgrepo.com/show/507398/plus-circle.svg"/>
+                        <img alt="decrease" className="action-icons" src="https://www.svgrepo.com/show/507369/minus-circle.svg"/>
+                        <img alt="delete" className="action-icons" src="https://www.svgrepo.com/show/500534/delete-filled.svg"/>
                     </div>
                 </div>
             </div>
