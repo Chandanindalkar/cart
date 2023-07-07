@@ -14,18 +14,18 @@ body {
   padding: 0 20px;
 }
 .left-block {
-  padding: 0 20px;
+  padding: 0 35px;
   height: 110;
   width: 110;
   border-radius: 4;
-  background: gray;
+  background: rgb(180, 180, 180);
 }
 .left-block-img {
   padding: 0 20px;
   height: 110;
   width: 110;
   border-radius: 4;
-  background: gray;
+  background: rgb(180, 180, 180);
 }
 .cart-item-actions {
   margin-top: 20px;
