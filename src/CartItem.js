@@ -3,16 +3,6 @@ import "./index.css"
 
 // class based componenet
 class CartItem extends React.Component{
-    constructor() {
-        super();
-        this.state = {
-            price: 199,
-            title: 'Phone',
-            qty: 1,
-            img: ''
-        }
-    }
-
     increaseQuantity = () => {
         // this.setState({
         //     qty: this.state.qty + 1,
@@ -51,9 +41,11 @@ class CartItem extends React.Component{
 
     // for a class componenet to be a react component, we use render
     render() { 
-        const {price, title, qty} = this.state; // destructuring
+        console.log(this.props)
+        const {price, title, qty} = this.props.product; // destructuring
         return(
             <div className="cart-item">
+                {this.props.jsx}
                 <div className="left-block">
                     <img className="left-block-img"/>
                 </div>

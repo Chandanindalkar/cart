@@ -38,3 +38,7 @@ body {
 .action-icons:hover {
   cursor: pointer;
 }
+.cart {
+  display: inline-flex;
+  flex-direction: column;
+}
