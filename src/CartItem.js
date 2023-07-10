@@ -4,14 +4,16 @@ import "./index.css"
 // class based componenet
 class CartItem extends React.Component{
 
-    deleteItem = () => {
-        
-    }
-
     // for a class componenet to be a react component, we use render
     render() { 
-        console.log(this.props)
+        // console.log(this.props)
         const {price, title, qty} = this.props.product; // destructuring
+        const {
+            product,
+            onIncreaseQuantity,
+            onDecreaseQuantity,
+            onDeleteProduct
+          } = this.props;
         return(
             <div className="cart-item">
                 {this.props.jsx}
@@ -28,19 +30,19 @@ class CartItem extends React.Component{
                             alt="increase" 
                             className="action-icons" 
                             src="https://www.svgrepo.com/show/507398/plus-circle.svg"
-                            onClick={() => this.props.onIncreaseQuantity(this.props.product)}
+                            onClick={() => onIncreaseQuantity(product)}
                         />
                         <img
                             alt="decrease" 
                             className="action-icons" 
                             src="https://www.svgrepo.com/show/507369/minus-circle.svg"
-                            onClick={() => this.props.onDecreaseQuantity(this.props.product)}
+                            onClick={() => onDecreaseQuantity(product)}
                         />
                         <img 
                             alt="delete" 
                             className="action-icons" 
                             src="https://www.svgrepo.com/show/500534/delete-filled.svg"
-                            onClick={this.deleteItem}
+                            onClick={() => onDeleteProduct(product.id)}
                         />
                     </div>
                 </div>
